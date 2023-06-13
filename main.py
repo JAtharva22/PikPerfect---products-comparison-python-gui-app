@@ -37,7 +37,7 @@ class ApplicationWindow(QMainWindow):
 
 
     def delhistory(self):
-        connection = pymysql.connect(host='localhost', user='root', password='athjdv9170', db='products', port=3306)
+        connection = pymysql.connect(host='localhost', user='root', password='', db='products', port=3306)
             
         # Set up the SQL query
         query = "DELETE FROM history WHERE username = 'atharva' "
@@ -53,7 +53,7 @@ class ApplicationWindow(QMainWindow):
         self.update()
 
     def delwishlist(self):
-        connection = pymysql.connect(host='localhost', user='root', password='athjdv9170', db='products', port=3306)
+        connection = pymysql.connect(host='localhost', user='root', password='', db='products', port=3306)
             
         # Set up the SQL query
         query = "DELETE FROM wishlist WHERE username = 'atharva' "
@@ -78,7 +78,7 @@ class ApplicationWindow(QMainWindow):
 
     def hist(self):
         # Set up the SQL connection
-        connection = pymysql.connect(host='localhost', user='root', password='athjdv9170', db='products', port=3306)
+        connection = pymysql.connect(host='localhost', user='root', password='', db='products', port=3306)
 
         # Set up the SQL query
         sql_query = "SELECT * FROM history"
@@ -102,7 +102,7 @@ class ApplicationWindow(QMainWindow):
 
     def wish(self):
         # Set up the SQL connection
-        connection = pymysql.connect(host='localhost', user='root', password='athjdv9170', db='products', port=3306)
+        connection = pymysql.connect(host='localhost', user='root', password='', db='products', port=3306)
 
         # Set up the SQL query
         sql_query = "SELECT * FROM wishlist"
@@ -161,7 +161,7 @@ class ProductWidget(QWidget):
 
     def open1(self):
         choiceselected(self.product['image_link'])
-        connection = pymysql.connect(host='localhost', user='root', password='athjdv9170', db='products', port=3306)
+        connection = pymysql.connect(host='localhost', user='root', password='', db='products', port=3306)
             
         # Set up the SQL query
         query = "INSERT INTO history (name, link, username) VALUES (%s, %s, %s)"
@@ -307,7 +307,7 @@ class MainWindow2(QWidget):
 
         def addwishbtn1(self):
             # Set up the SQL connection
-            connection = pymysql.connect(host='localhost', user='root', password='athjdv9170', db='products', port=3306)
+            connection = pymysql.connect(host='localhost', user='root', password='', db='products', port=3306)
             
             # Set up the SQL query
             query = "INSERT INTO wishlist (name, link, username) VALUES (%s, %s, %s)"
@@ -332,7 +332,7 @@ class MainWindow2(QWidget):
 
         def addwishbtn2(self):
             # Set up the SQL connection
-            connection = pymysql.connect(host='localhost', user='root', password='athjdv9170', db='products', port=3306)
+            connection = pymysql.connect(host='localhost', user='root', password='', db='products', port=3306)
             
             # Set up the SQL query
             query = "INSERT INTO wishlist (name, link, username) VALUES (%s, %s, %s)"
